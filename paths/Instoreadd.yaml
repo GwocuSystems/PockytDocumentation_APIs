@@ -1,7 +1,7 @@
 post:
-  summary: add
+  summary: /add
   description: Enables the creation of a transaction object and allows the customer to retrieve a transaction number to initiate payment.
-  operationId: /add
+  operationId: instoreadd
   deprecated: false
   tags: 
     - In-Store Digital Wallet Payment Processing Sandbox API`s
