@@ -1,0 +1,89 @@
+post:
+  summary: Retrieve Customer
+  description: Use this API to retrieve the customer information stored in the record to use in calls to the SecurePay API.
+  operationId: Retrievecustomer 
+  deprecated: false
+  tags: 
+    -  Customer Records APIs
+  parameters:        
+    - name: timestamp
+      in: header
+      description: Current UTC time, correct format should be "yyyy-mm-ddTHH:MM:SSZ"
+      required: true
+      schema: 
+        type: string
+    - name: merchantNo
+      in: header
+      description: Merchant ID in Pockyt's system
+      required: true
+      schema: 
+        type: string
+    - name: storeNo
+      in: header
+      description: Store Number in Pockyt's system
+      required: true         
+      schema: 
+        type: string
+    - name: verifySign
+      in: query
+      description: The API signature
+      required: true
+      schema: 
+        type: string
+    - name: customerCode
+      in: header
+      description: The user-defined user's ID in Yuansfer's system.
+      required: true
+      schema: 
+        type: string
+    - name: customerNo
+      in: header
+      description: The auto-generated user's ID in Yuansfer's system.
+      required: true
+      schema: 
+        type: string
+  security: 
+    - api_keys: []
+      jwt: []
+  
+  requestBody: 
+    content: 
+      application/json:
+        schema: 
+          $ref: ../schemas/retrievecustomer.yaml
+  responses:
+    200: # Response                   
+      description: Returns a 200 status to indicate.....
+      content: # Response Body
+        application/json: # Media Type
+          schema: 
+            type: object # Data Type
+            properties: 
+              id:
+                type: integer
+              message: 
+                type: string
+              result:
+                type: object
+            example: # Sample Data              
+    201:
+      description: Returns a 201 status to indicate.....
+      content: 
+        text/plain:
+          schema: 
+            type: string 
+            example: Error 
+    403:
+      description: Returns a 403 status to indicate.....
+      content: 
+        text/plain:
+          schema: 
+            type: string 
+            example: Error
+    401:
+      description: Returns a 401 status to indicate.....
+      content: 
+        text/plain:
+          schema: 
+            type: string 
+            example: Error
