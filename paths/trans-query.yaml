@@ -27,7 +27,7 @@ post:
     - name: reference
       in: header
       description: Reference number of original sale
-      required: true         
+      required: false       
       schema: 
         type: string
     - name: verifySign

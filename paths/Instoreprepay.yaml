@@ -21,7 +21,7 @@ post:
     - name: storeAdminNo
       in: header
       description: A unique value created and assigned by Pockyt`s support team during the onboarding process
-      required: true
+      required: false
       schema: 
         type: string
     - name: transactionNo
@@ -42,7 +42,7 @@ post:
       required: true
       schema: 
         type: string
-    - name: vedndor
+    - name: vendor
       in: header
       description: The digital wallet service. For example, "alipay", "wechat", "unionpay"
       required: false

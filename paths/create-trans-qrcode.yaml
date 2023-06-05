@@ -21,7 +21,7 @@ post:
     - name: storeAdminNo
       in: header
       description: The store admin ID
-      required: true
+      required: false
       schema: 
         type: string
     - name: amount

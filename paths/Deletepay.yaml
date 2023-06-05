@@ -21,7 +21,7 @@ post:
     - name: storeAdminNo
       in: header
       description: API MD5 hashed signature
-      required: true
+      required: false
       schema: 
         type: string
     - name: timestamp
