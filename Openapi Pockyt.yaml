@@ -86,8 +86,8 @@ components:
   securitySchemes:
     api_keys:
       description: |
-        Generate your secret API key in the app settings.
-      name: secret-key
+        Generate your bearer token value in the app settings.
+      name: Bearer token value
       type: apiKey
       in: header
     jwt:
