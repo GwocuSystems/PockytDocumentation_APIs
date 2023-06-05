@@ -86,7 +86,7 @@ components:
   securitySchemes:
     api_keys:
       description: |
-        Generate your bearer token value in the app settings.
+        Generate bearer token value in the application settings.
       name: Bearer token value
       type: apiKey
       in: header
