@@ -6,7 +6,7 @@ info:
     $ref: introduction/_introduction.md 
   license:
     name: Pockyt
-    url: https://mapi.Pockyt.yunkeguan.com
+    url: https://mapi.Pockyt.yunkeguan.com/app-data-search/v3 
 
   contact: 
     name: API Team
