@@ -1,5 +1,0 @@
-properties: 
-  result:
-    type: object
-  ret_msg:
-     type: string
