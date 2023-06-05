@@ -1,0 +1,14 @@
+properties: 
+  customerNo:
+    type: string
+  accountToken:
+     type: string
+  merchantNo:
+     type: string
+  storeNo:
+     type: string
+  timestamp:
+     type: string
+  verifySign:
+     type: string
+  

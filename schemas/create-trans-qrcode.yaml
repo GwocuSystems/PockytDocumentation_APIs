@@ -1,0 +1,23 @@
+properties: 
+  merchantNo:
+    type: string
+  storeNo:
+     type: string
+  verifySign:
+     type: string
+  amount:
+     type: string
+  currency:
+     type: string
+  settleCurrency:
+     type: string
+  needQrcode:
+      type: string
+  reference:
+     type: string
+  ipnUrl:
+     type: string
+  vendor:
+     type: string
+  timeout:
+     type: string
