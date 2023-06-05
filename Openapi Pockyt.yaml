@@ -1,0 +1,169 @@
+openapi: 3.1.0
+info:
+  title: Pockyt Online Payments API's
+  version: 0.1.0
+  description: 
+    $ref: introduction/_introduction.md 
+  license:
+    name: Pockyt
+    url: https://mapi.Pockyt.yunkeguan.com
+
+  contact: 
+    name: API Team
+    email: n@gwocu.com  
+    url: https://gwocu.com/contact
+
+tags:
+  - name: Universal APIs
+    description: List of Universal APIs 
+  - name : Pockyt In-store APIs 
+    description: List of In-store APIs
+  - name: Pockyt Hosted Checkout APIs
+    description: List of Hosted Checkout APIs
+  - name: Pockyt Integrated Payment APIs 
+    description: List of Integrated Payment APIs
+  - name: Customer Records APIs
+    description: List of Customer Record APIs
+  - name: Recurring Payment APIs
+    description: List of Recurring Payment APIs
+  - name: Payouts APIs
+    description: List of Payout APIs
+
+servers: 
+  - url:  https://mapi.yuansfer.com
+    description: Production
+  - url:  https://mapi.yuansfer.yunkeguan.com
+    description: Sandbox
+components:
+  schemas: 
+    secure-pay:
+      $ref:  ./schemas/secure-pay.yaml
+    process:
+      $ref: ./schemas/process.yaml
+    pre-pay: 
+      $ref: ./schemas/pre-pay.yaml
+    refund:
+      $ref: ./schemas/refund.yaml
+    cancel:
+      $ref: ./schemas/cancel.yaml
+    consult:
+      $ref: ./schemas/consult.yaml
+    apply-token:
+      $ref: ./schemas/apply-token.yaml
+    pay:
+     $ref: ./schemas/pay.yaml
+    revoke:
+      $ref: ./schemas/revoke.yaml
+    register:
+      $ref: ./schemas/register.yaml
+    retrieve:
+      $ref: ./schemas/retrieve.yaml
+    update:
+      $ref: ./schemas/update.yaml
+    trans-query:
+      $ref: ./schemas/trans-query.yaml
+    Instoreadd:
+      $ref: ./schemas/Instoreadd.yaml
+    Instoreprepay:
+      $ref: ./schemas/Instoreprepay.yaml
+    create-trans-qrcode:
+      $ref: ./schemas/create-trans-qrcode.yaml
+    createbankaccount:
+      $ref: ./schemas/createbankaccount.yaml
+    registercustomer:
+      $ref: ./schemas/registercustomer.yaml
+    retrievecustomer:
+      $ref: ./schemas/retrievecustomer.yaml
+    TransferPayout:
+      $ref: ./schemas/TransferPayout.yaml
+    updatecustomer:
+      $ref: ./schemas/updatecustomer.yaml
+    Deletepay:
+      $ref: ./schemas/Deletepay.yaml
+    Asynchronous:
+      $ref: ./schemas/Asynchronous.yaml
+
+  securitySchemes:
+    api_keys:
+      description: |
+        Generate your secret API key in the app settings.
+      name: secret-key
+      type: apiKey
+      in: header
+    jwt:
+      description: |
+        Generate your JWT when you log in.
+      type: http
+      scheme: bearer
+      bearerFormat: JWT   
+paths:  
+  /secure-pay:  
+     $ref: ./paths/secure-pay.yaml
+  /process:
+    $ref: ./paths/process.yaml
+  /prepay:
+    $ref: ./paths/prepay.yaml
+  /refund:
+    $ref: ./paths/refund.yaml
+  /Instorecancel:
+    $ref: ./paths/Instorecancel.yaml
+  /consult:
+    $ref: ./paths/consult.yaml
+  /apply-token:
+    $ref: ./paths/apply-token.yaml
+  /pay:
+    $ref: ./paths/pay.yaml
+  /revovke:
+    $ref: ./paths/revoke.yaml
+  /register:
+    $ref: ./paths/register.yaml
+  /retrieve:
+    $ref: ./paths/retrieve.yaml
+  /update:
+    $ref: ./paths/update.yaml
+  /trans-query:
+    $ref: ./paths/trans-query.yaml
+  /Instoreadd:
+    $ref: ./paths/Instoreadd.yaml
+  /Instoreprepay:
+    $ref: ./paths/Instoreprepay.yaml
+  /create-trans-qrcode:
+    $ref: ./paths/create-trans-qrcode.yaml
+  /createbankaccount:
+    $ref: ./paths/createbankaccount.yaml
+  /registercustomer:
+    $ref: paths/registercustomer.yaml
+  /retrievecustomer:
+    $ref: ./paths/retrievecustomer.yaml
+  /TransferPayout:
+    $ref: ./paths/TransferPayout.yaml
+  /updatecustomer:
+    $ref: ./paths/updatecustomer.yaml
+  /Deletepay:
+    $ref: ./paths/Deletepay.yaml
+  /Asynchronous:
+    $ref: ./paths/Asynchronous.yaml
+
+  
+
+  
+   
+       
+      
+  
+        
+         
+                   
+                 
+        
+ 
+          
+         
+      
+  
+           
+   
+  
+ 
+  
+  
