@@ -29,13 +29,13 @@ post:
         description: The supported settlement currency "USD"
         required: true
         schema: 
-          type: number
+          type: string
       - name: settleCuurency
         in: header
         description: The supported settlement currency "USD"
         required: true
         schema: 
-          type: number
+          type: string
       - name: transactionNo
         in: header
         description:  Transaction number of orginal sale

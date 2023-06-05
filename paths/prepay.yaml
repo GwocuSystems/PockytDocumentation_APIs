@@ -29,7 +29,7 @@ post:
       description:  Support transaction currenices are "USD", "CNY"
       required: true
       schema: 
-        type: number
+        type: string
     - name: settleCuurency
       in: header
       description: The Supported settlement currenices is "USD"

@@ -29,7 +29,7 @@ post:
       description:  Reference number of orginial sale
       required: true
       schema: 
-        type: number
+        type: string
     - name: VerifySign
       in: header
       description:  The paramter signature

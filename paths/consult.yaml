@@ -29,7 +29,7 @@ post:
       description: (Optional) The payment note
       required: true
       schema: 
-        type: number
+        type: string
     - name: osType
       in: header
       description:  The terminal is "WAP" or "APP", return this parameter.The possible value is "IOS", "ANDROID"
