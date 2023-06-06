@@ -60,8 +60,8 @@ components:
       $ref: ./schemas/retrieve.yaml
     update:
       $ref: ./schemas/update.yaml
-    trans-query:
-      $ref: ./schemas/trans-query.yaml
+    tran-query:
+      $ref: ./schemas/tran-query.yaml
     Instoreadd:
       $ref: ./schemas/Instoreadd.yaml
     Instoreprepay:
@@ -106,7 +106,7 @@ paths:
   /refund:
     $ref: ./paths/appdatasearchv3refund.yaml
   /Instorecancel:
-    $ref: ./paths/Instorecancel.yaml
+    $ref: ./paths/cancel.yaml
   /consult:
     $ref: ./paths/consult.yaml
   /apply-token:
@@ -121,8 +121,8 @@ paths:
     $ref: ./paths/retrieve.yaml
   /update:
     $ref: ./paths/update.yaml
-  /trans-query:
-    $ref: ./paths/trans-query.yaml
+  /tran-query:
+    $ref: ./paths/tran-query.yaml
   /Instoreadd:
     $ref: ./paths/Instoreadd.yaml
   /Instoreprepay:
