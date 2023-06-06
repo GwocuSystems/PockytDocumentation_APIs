@@ -6,7 +6,7 @@ info:
     $ref: introduction/_introduction.md 
   license:
     name: Pockyt
-    url: https://mapi.Pockyt.yunkeguan.com
+    url: https://mapi.Pockyt.yunkeguan.com 
 
   contact: 
     name: API Team
@@ -30,7 +30,7 @@ tags:
     description: List of Payout APIs
 
 servers: 
-  - url:  https://mapi.yuansfer.com
+  - url:  https://mapi.yuansfer.com/app-data-search/v3 
     description: Production
   - url:  https://mapi.yuansfer.yunkeguan.com
     description: Sandbox
@@ -43,7 +43,7 @@ components:
     pre-pay: 
       $ref: ./schemas/pre-pay.yaml
     refund:
-      $ref: ./schemas/refund.yaml
+      $ref: ./schemas/appdatasearchv3refund.yaml
     cancel:
       $ref: ./schemas/cancel.yaml
     consult:
@@ -82,20 +82,20 @@ components:
       $ref: ./schemas/Deletepay.yaml
     Asynchronous:
       $ref: ./schemas/Asynchronous.yaml
-
+     
   securitySchemes:
-    api_keys:
-      description: |
-        Generate bearer token value in the application settings.
-      name: Bearer token value
-      type: apiKey
-      in: header
-    jwt:
-      description: |
-        Generate your JWT when you log in.
-      type: http
-      scheme: bearer
-      bearerFormat: JWT   
+        api_keys:
+          description: |
+            Generate bearer token value in the application settings.
+          name: Bearer token value
+          type: apiKey
+          in: header
+        jwt:
+          description: |
+            Generate your JWT when you log in.
+          type: http
+          scheme: bearer
+          bearerFormat: JWT 
 paths:  
   /secure-pay:  
      $ref: ./paths/secure-pay.yaml
@@ -104,7 +104,7 @@ paths:
   /prepay:
     $ref: ./paths/prepay.yaml
   /refund:
-    $ref: ./paths/refund.yaml
+    $ref: ./paths/appdatasearchv3refund.yaml
   /Instorecancel:
     $ref: ./paths/Instorecancel.yaml
   /consult:
