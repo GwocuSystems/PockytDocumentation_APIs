@@ -1,0 +1,17 @@
+properties:
+  merchantNo:
+      type: string
+  storeNo: 
+      type: string
+  verifySign:
+      type: string
+  refundAmount:
+      type: string
+  currency: 
+      type: number
+  settleCurrency:
+      type: number
+  transactionNo:
+      type: string
+  refundReference: 
+      type: string
