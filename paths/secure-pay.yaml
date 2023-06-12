@@ -1,4 +1,6 @@
 post:
+  servers: 
+    - url: https://mapi.yuansfer.com/online/v3
   summary: SecurePay API
   description: This API allows merchant websites to send customers to Pockyt for receive payments.
   operationId: secure-pay 
@@ -95,7 +97,7 @@ post:
       description: The timeout in minutes. The default value is 120
       required: true
       schema: 
-        type: string
+        type: integer
     - name: goodsInfo
       in: header
       description: JSON encoded string of an array of items that the customer purchases from the merchant; Special characters are not supported. e.g [{"goods_name":"name1","quantity":"quantity1"}, {"goods_name":"name2","quantity":"quantity2"}]
@@ -114,9 +116,7 @@ post:
       required: true
       schema: 
         type: string
-  security: 
-    - api_keys: []
-      jwt: []
+  security: []
   
   requestBody: 
     content: 
@@ -124,8 +124,8 @@ post:
         schema: 
           $ref: ../schemas/secure-pay.yaml
   responses:
-    200: # Response                   
-      description: Returns a 200 status to indicate.....
+    200: # Response                 
+      description: |
       content: # Response Body
         application/json: # Media Type
           schema: 
@@ -138,22 +138,8 @@ post:
               result:
                 type: object
             example: # Sample Data              
-    201:
-      description: Returns a 201 status to indicate.....
-      content: 
-        text/plain:
-          schema: 
-            type: string 
-            example: Error 
-    403:
-      description: Returns a 403 status to indicate.....
-      content: 
-        text/plain:
-          schema: 
-            type: string 
-            example: Error
     401:
-      description: Returns a 401 status to indicate.....
+      description: |
       content: 
         text/plain:
           schema: 
