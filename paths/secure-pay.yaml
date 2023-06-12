@@ -77,13 +77,13 @@ post:
     - name: description 
       in: header
       description: The description of the transaction will be displayed on the invoice
-      required: true
+      required: false
       schema: 
         type: string
     - name: note 
       in: header
       description: The payments notes
-      required: true
+      required: false
       schema: 
         type: string
     - name: OsType 
@@ -95,19 +95,19 @@ post:
     - name: timeout 
       in: header
       description: The timeout in minutes. The default value is 120
-      required: true
+      required: false
       schema: 
         type: integer
     - name: goodsInfo
       in: header
       description: JSON encoded string of an array of items that the customer purchases from the merchant; Special characters are not supported. e.g [{"goods_name":"name1","quantity":"quantity1"}, {"goods_name":"name2","quantity":"quantity2"}]
-      required: true
+      required: false
       schema: 
         type: string
     - name: creditType
       in: header
       description: The payment type. This is only required when vendor = creditcard. The values are "normal" or "CIT". The default is "normal"
-      required: true
+      required: false
       schema: 
         type: string
     - name: verifySign
