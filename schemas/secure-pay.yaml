@@ -15,8 +15,6 @@ properties:
     type: string
   timeout:
     type: integer
-  reference:
-    type: string
   ipnURL:
     type: string
   callbackUrl:
@@ -24,8 +22,6 @@ properties:
   description:
     type: string
   note:
-    type: string
-  osType:
     type: string
   goodsInfo:
     type: string
