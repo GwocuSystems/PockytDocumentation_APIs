@@ -62,12 +62,6 @@ post:
       required: true
       schema: 
         type: string
-    - name: reference 
-      in: header
-      description: The Invoice Number of the transaction in the merchant's system.  
-      required: true
-      schema: 
-        type: string
     - name: terminal
       in: header
       description: The possible values are "ONLINE" for desktop/web app and "WAP" for mobile, YIP for Braintree
@@ -84,12 +78,6 @@ post:
       in: header
       description: The payments notes
       required: false
-      schema: 
-        type: string
-    - name: OsType 
-      in: header
-      description: Required when terminal is WAP or APP, the possible values are "IOS" and "ANDROID"
-      required: true
       schema: 
         type: string
     - name: timeout 
