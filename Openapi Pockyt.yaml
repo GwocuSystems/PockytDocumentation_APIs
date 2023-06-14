@@ -95,7 +95,7 @@ paths:
     $ref: ./paths/prepay.yaml
   /refund:
     $ref: ./paths/appdatasearchv3refund.yaml
-  /Instorecancel:
+  /cancel:
     $ref: ./paths/cancel.yaml
   /consult:
     $ref: ./paths/consult.yaml
