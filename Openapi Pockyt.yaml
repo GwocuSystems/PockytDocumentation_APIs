@@ -30,8 +30,9 @@ tags:
     description: List of Payout APIs
 
 servers: 
-  - url:  https://mapi.yuansfer.com/app-data-search/v3 
-    description: Production
+
+  - url:  https://mapi.yuansfer.com
+    description: Prodyction
   - url:  https://mapi.yuansfer.yunkeguan.com
     description: Sandbox
 components:
@@ -62,8 +63,8 @@ components:
       $ref: ./schemas/update.yaml
     tran-query:
       $ref: ./schemas/tran-query.yaml
-    Instoreadd:
-      $ref: ./schemas/Instoreadd.yaml
+    add:
+      $ref: ./schemas/add.yaml
     Instoreprepay:
       $ref: ./schemas/Instoreprepay.yaml
     create-trans-qrcode:
@@ -72,8 +73,8 @@ components:
       $ref: ./schemas/createbankaccount.yaml
     registercustomer:
       $ref: ./schemas/registercustomer.yaml
-    retrievecustomer:
-      $ref: ./schemas/retrievecustomer.yaml
+    customersretrieve:
+      $ref: schemas/customersretrieve.yaml
     TransferPayout:
       $ref: ./schemas/TransferPayout.yaml
     updatecustomer:
@@ -83,19 +84,8 @@ components:
     Asynchronous:
       $ref: ./schemas/Asynchronous.yaml
      
-  securitySchemes:
-        api_keys:
-          description: |
-            Generate bearer token value in the application settings.
-          name: Bearer token value
-          type: apiKey
-          in: header
-        jwt:
-          description: |
-            Generate your JWT when you log in.
-          type: http
-          scheme: bearer
-          bearerFormat: JWT 
+security: []
+       
 paths:  
   /secure-pay:  
      $ref: ./paths/secure-pay.yaml
@@ -113,7 +103,7 @@ paths:
     $ref: ./paths/apply-token.yaml
   /pay:
     $ref: ./paths/pay.yaml
-  /revovke:
+  /revoke:
     $ref: ./paths/revoke.yaml
   /register:
     $ref: ./paths/register.yaml
@@ -123,18 +113,18 @@ paths:
     $ref: ./paths/update.yaml
   /tran-query:
     $ref: ./paths/tran-query.yaml
-  /Instoreadd:
-    $ref: ./paths/Instoreadd.yaml
+  /add:
+    $ref: ./paths/add.yaml
   /Instoreprepay:
     $ref: ./paths/Instoreprepay.yaml
   /create-trans-qrcode:
     $ref: ./paths/create-trans-qrcode.yaml
   /createbankaccount:
     $ref: ./paths/createbankaccount.yaml
-  /registercustomer:
-    $ref: paths/registercustomer.yaml
-  /retrievecustomer:
-    $ref: ./paths/retrievecustomer.yaml
+  /create:
+    $ref: ./paths/create.yaml
+  /customersretrieve:
+    $ref: ./paths/customersretrieve.yaml
   /TransferPayout:
     $ref: ./paths/TransferPayout.yaml
   /updatecustomer:
